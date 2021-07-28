@@ -1,12 +1,13 @@
 import React from 'react';
 
 
-function Main() {
+
+function Main(props) {
     return (
         <main>
             <section className="profile">
                 <div className="profile__info-section">
-                    <div className="profile__avatar">
+                    <div className="profile__avatar" onClick={props.onEditAvatar}>
                         <img src="<%=require('./images/image.svg')%>" alt="Avatar" className="avatar" />
                         <div className="middle">
                             <div className="profile__image"></div>
@@ -16,9 +17,9 @@ function Main() {
                         <h1 className="profile__info-name">Жак-Ив Кусто</h1>
                         <p className="profile__info-text">Исследователь океана</p>
                     </div>
-                    <button className="profile__edit-button" type="button"></button>
+                    <button className="profile__edit-button" type="button" onClick={props.onEditProfile}></button>
                 </div>
-                <button className="profile__add-button" type="button"></button>
+                <button className="profile__add-button" type="button" onClick={props.onAddPlace}></button>
             </section>
             <div className="elements"></div>
 
@@ -35,6 +36,7 @@ function Main() {
                     <button className="element__delete" type="button"></button>
                 </div>
             </template>
+
 
         </main>
     )
