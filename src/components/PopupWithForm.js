@@ -17,20 +17,6 @@ function PopupWithForm (props) {
                 </div>
             </div>
 
-
-            {/*Попап изменения аватара*/}
-            <div className="popup popup-avatar">
-                <div className="popup__body">
-                    <div className="popup__content popup-avatar__content">
-                        <button className="popup__close close-popup" type="button"></button>
-                        <h2 className="popup__title">Обновить аватар</h2>
-                        <form action="#" name="avatar" className="form popup-avatar__form" noValidate>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-
             {/*Попап удаления карточки*/}
             <div className="popup popup-delete">
                 <div className="popup__body">

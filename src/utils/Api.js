@@ -1,4 +1,4 @@
-export default class Api {
+class Api {
     constructor(req) {
         this._headers = req.headers;
         this._url = req.url;
@@ -91,3 +91,13 @@ export default class Api {
         return Promise.reject(`Ошибка ${res.status}`);
     }
 }
+
+const api = new Api({
+    url: 'https://mesto.nomoreparties.co/v1/cohort-25',
+    headers: {
+        authorization: '1174dadd-027e-4ffe-b733-ac48b2285022',
+        'Content-Type': 'application/json',
+    }
+});
+
+export default api;
