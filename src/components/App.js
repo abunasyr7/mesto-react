@@ -5,7 +5,7 @@ import Main from "./Main";
 import PopupEditProfile from "./PopupEditProfile";
 import PopupAddCard from "./PopupAddCard";
 import PopupEditAvatar from "./PopupEditAvatar";
-import PopupImage from "./ImagePopup";
+import ImagePopup from "./ImagePopup";
 
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
             <PopupEditProfile isOpen={isEditProfilePopupOpen} onClose={closeAllPopup} />
             <PopupAddCard isOpen={isAddPlacePopupOpen} onClose={closeAllPopup} />
             <PopupEditAvatar isOpen={isEditAvatarPopupOpen} onClose={closeAllPopup} />
-            <PopupImage card={selectedCard !== null && selectedCard}  onClose={closeAllPopup}/>
+            <ImagePopup card={selectedCard !== null && selectedCard}  onClose={closeAllPopup}/>
         </div>
       </body>
   );
