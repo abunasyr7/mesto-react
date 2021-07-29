@@ -1,7 +1,7 @@
 import React from 'react';
 import PopupWithForm from "./PopupWithForm";
 
-function PopupEditAvatar (props) {
+function EditAvatarPopup (props) {
     return (
         <PopupWithForm
             isOpen={props.isOpen}
@@ -19,4 +19,4 @@ function PopupEditAvatar (props) {
     )
 }
 
-export default PopupEditAvatar
+export default EditAvatarPopup

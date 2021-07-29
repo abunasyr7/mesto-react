@@ -2,9 +2,9 @@ import React from 'react';
 import Header from '../components/Header'
 import Footer from "./Footer";
 import Main from "./Main";
-import PopupEditProfile from "./PopupEditProfile";
-import PopupAddCard from "./PopupAddCard";
-import PopupEditAvatar from "./PopupEditAvatar";
+import EditProfilePopup from "./EditProfilePopup";
+import AddCardPopup from "./AddCardPopup";
+import EditAvatarPopup from "./EditAvatarPopup";
 import ImagePopup from "./ImagePopup";
 
 
@@ -38,7 +38,6 @@ function App() {
     }
 
   return (
-      <body className="body">
         <div className="page">
           <Header />
           <Main
@@ -48,12 +47,11 @@ function App() {
               onCardClick={handleCardClick}
           />
           <Footer />
-            <PopupEditProfile isOpen={isEditProfilePopupOpen} onClose={closeAllPopup} />
-            <PopupAddCard isOpen={isAddPlacePopupOpen} onClose={closeAllPopup} />
-            <PopupEditAvatar isOpen={isEditAvatarPopupOpen} onClose={closeAllPopup} />
+            <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopup} />
+            <AddCardPopup isOpen={isAddPlacePopupOpen} onClose={closeAllPopup} />
+            <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopup} />
             <ImagePopup card={selectedCard !== null && selectedCard}  onClose={closeAllPopup}/>
         </div>
-      </body>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import PopupWithForm from "./PopupWithForm";
 
-function PopupEditProfile (props) {
+function EditProfilePopup (props) {
     return (
         <PopupWithForm
             isOpen = {props.isOpen}
@@ -24,4 +24,4 @@ function PopupEditProfile (props) {
     )
 }
 
-export default PopupEditProfile
+export default EditProfilePopup

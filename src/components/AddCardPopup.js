@@ -2,7 +2,7 @@ import React from 'react';
 import PopupWithForm from "./PopupWithForm";
 
 
-function PopupAddCard(props) {
+function AddCardPopup(props) {
     return (
         <PopupWithForm
             isOpen={props.isOpen}
@@ -25,4 +25,4 @@ function PopupAddCard(props) {
     )
 }
 
-export default PopupAddCard;
+export default AddCardPopup;
