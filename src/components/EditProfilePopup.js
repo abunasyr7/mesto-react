@@ -40,12 +40,12 @@ function EditProfilePopup (props) {
         >
             <section className="form__section">
                 <input type="text" name="name" className="form__input popup__input popup__input_type_name"
-                       minLength="2" maxLength="40" placeholder="Имя" onChange={handleSetName}  value={name}/>
+                       minLength="2" maxLength="40" placeholder="Имя" onChange={handleSetName}  value={name || ''}/>
                 <span className="form__input-error"></span>
             </section>
             <section className="form__section">
                 <input type="text" name="job" className="form__input popup__input popup__input_type_job"
-                       minLength="2" maxLength="200" placeholder="Вид деятельности" onChange={handleSetDescription} value={description} required/>
+                       minLength="2" maxLength="200" placeholder="Вид деятельности" onChange={handleSetDescription} value={description || ''} required/>
                 <span className="form__input-error"></span>
             </section>
         </PopupWithForm>
