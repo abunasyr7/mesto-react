@@ -39,12 +39,12 @@ function AddPlacePopup(props) {
         >
             <section className="form__section">
                 <input type="text" name="place" className="form__input popup__input popup__input_type_place"
-                       placeholder="Название" minLength="2" maxLength="30" required onChange={addName}/>
+                       placeholder="Название" minLength="2" maxLength="30" required value={name || ''} onChange={addName}/>
                 <span className="form__input-error"></span>
             </section>
             <section className="form__section">
                 <input type="url" name="image" className="form__input popup__input popup__input_type_image"
-                       placeholder="Ссылка на картинку" required onChange={addLink}/>
+                       placeholder="Ссылка на картинку" required value={link || ''} onChange={addLink}/>
                 <span className="form__input-error"></span>
             </section>
         </PopupWithForm>
