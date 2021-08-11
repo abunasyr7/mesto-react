@@ -3,10 +3,10 @@ import Header from '../components/Header'
 import Footer from "./Footer";
 import Main from "./Main";
 import EditProfilePopup from "./EditProfilePopup";
-import AddCardPopup from "./AddCardPopup";
+import AddPlacePopup from "./AddPlacePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import ImagePopup from "./ImagePopup";
-import api from "../utils/Api";
+import api from "../utils/api";
 import {CurrentUserContext} from "../contexts/CurrentUserContext";
 
 function App() {
@@ -132,7 +132,7 @@ function App() {
               />
               <Footer />
                 <EditProfilePopup isOpen={isEditProfilePopupOpen} onClose={closeAllPopup} onUpdateUser={handleUpdateUser} />
-                <AddCardPopup isOpen={isAddPlacePopupOpen} onClose={closeAllPopup} onAddPlace={handleAddPlacePopup} />
+                <AddPlacePopup isOpen={isAddPlacePopupOpen} onClose={closeAllPopup} onAddPlace={handleAddPlacePopup} />
                 <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopup} onUpdateAvatar={handleUpdateAvatar}/>
                 <ImagePopup card={selectedCard !== null && selectedCard}  onClose={closeAllPopup}/>
         </div>
