@@ -18,25 +18,27 @@ class Api {
             .then(this._check);
     }
 
-    editUserData(name, about) {
+    editUserData(data) {
+        console.log(12)
+
         return fetch(`${this._url}/users/me`, {
             method: "PATCH",
             headers :this._headers,
             body: JSON.stringify({
-                name: name,
-                about: about
+                name: data.name,
+                about: data.about
             })
         })
             .then(this._check);
     }
 
-    addCard(name, link) {
+    addCard(data) {
         return fetch(`${this._url}/cards`, {
             method: "POST",
             headers: this._headers,
             body: JSON.stringify({
-                name: name,
-                link: link,
+                name: data.name,
+                link: data.link,
             })
         })
             .then(this._check);
@@ -72,13 +74,13 @@ class Api {
             .then(this._check);
     }
 
-    updateAvatar(link) {
-        console.log({link});
+    updateAvatar(data) {
+        console.log(data.link);
         return fetch(`${this._url}/users/me/avatar`, {
             method: "PATCH",
             headers: this._headers,
             body: JSON.stringify({
-                avatar: link,
+                avatar: data.avatar,
             })
         })
             .then(this._check);
@@ -89,6 +91,14 @@ class Api {
             return res.json();
         }
         return Promise.reject(`Ошибка ${res.status}`);
+    }
+
+    changeLikeCardStatus(id, isLiked) {
+        if (isLiked) {
+            return this.setLike(id)
+        } else {
+            return this.removeLike(id)
+        }
     }
 }
 
